@@ -1,4 +1,8 @@
-﻿using AnimeListerWPF.model;
+﻿// Copyright 2020 Davin Alfarizky Putra Basudewa
+// WPF Implementation of AnimizeLister
+// Based on Kotlin Version. Unfortunately Kotlin version not open sourced
+// This Program just for testing only using WPF technology
+using AnimeListerWPF.model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

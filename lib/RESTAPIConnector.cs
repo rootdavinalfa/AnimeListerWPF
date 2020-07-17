@@ -23,8 +23,8 @@ namespace AnimeListerWPF.lib
         static RESTAPIConnector()
         {
             Console.WriteLine("INITIALIZE REST CONNECTOR");
-            //client.BaseAddress = new Uri("https://api.dvnlabs.xyz/animize/");
-            client.BaseAddress = new Uri("http://127.0.0.1/animize/");
+            client.BaseAddress = new Uri("https://api.dvnlabs.xyz/animize/");
+            //client.BaseAddress = new Uri("http://127.0.0.1/animize/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));

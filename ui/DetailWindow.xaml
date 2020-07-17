@@ -1,0 +1,34 @@
+﻿<Window x:Class="AnimeListerWPF.ui.DetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimeListerWPF.ui"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
+        Title="Details" Height="470" Width="400" ResizeMode="CanMinimize">
+    <Grid>
+        <Image x:Name="detailBG" Stretch="Fill" Margin="0" d:IsHidden="True">
+            <Image.Effect>
+                <BlurEffect KernelType="Gaussian" Radius="90" />
+            </Image.Effect>
+        </Image>
+        <Image x:Name="detailImage" HorizontalAlignment="Left" Height="203" Margin="10,10,0,0" VerticalAlignment="Top" Width="136" Source="tester.jpg">
+            <Image.Effect>
+                <DropShadowEffect Color="#7F686868" Opacity="0.5"/>
+            </Image.Effect>
+            <Image.CacheMode>
+                <BitmapCache/>
+            </Image.CacheMode>
+        </Image>
+        <Label x:Name="detailPackage" Content="PKG99999" HorizontalAlignment="Left" Margin="160,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.018,-0.103" FontSize="14"/>
+        <TextBlock x:Name="detailTitle" HorizontalAlignment="Left" Margin="160,41,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="222" Height="59" LineStackingStrategy="BlockLineHeight" TextTrimming="WordEllipsis"/>
+        <TextBlock x:Name="detailSynopsis" HorizontalAlignment="Left" Margin="160,121,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontSize="14" Width="222" Height="308" TextTrimming="WordEllipsis" LineStackingStrategy="BlockLineHeight"/>
+        <TextBlock x:Name="detailGenre" HorizontalAlignment="Left" Margin="10,213,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="136" Height="64"/>
+        <Button x:Name="btnAnimize" Content="Animize" HorizontalAlignment="Left" Margin="10,306,0,0" VerticalAlignment="Top" Width="93" Style="{DynamicResource MetroButton}" Background="#FF008CCD" Foreground="White" Click="btnAnimize_Click"/>
+        <Button x:Name="btnMAL" Content="MAL" HorizontalAlignment="Left" Margin="10,348,0,0" VerticalAlignment="Top" Width="56" Style="{DynamicResource MetroButton}" Background="#FFEE5252" Foreground="White" Click="btnMAL_Click"/>
+        <Label x:Name="detailRating" Content="Rating : 0" HorizontalAlignment="Left" Margin="10,384,0,0" VerticalAlignment="Top" FontSize="14" Width="93"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimeListerWPF"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:lib="clr-namespace:AnimeListerWPF.lib" x:Class="AnimeListerWPF.MainWindow"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="AnimeLister | UAS PBO4 | Lecturer: Mr.Asep Mabrur" Height="600" Width="800" ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Height="109" Style="{StaticResource Header}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <Label Content="Nama : Davin Alfarizky Putra Basudewa&#xA;" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" Width="359" Height="30" FontSize="18" FontWeight="Bold" Style="{StaticResource textDefault}" Background="Transparent"/>
+            <Label Content="NPM : 1101171082" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="338" Height="30" FontSize="14" Style="{StaticResource textDefault}"/>
+            <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Right" Margin="700,18,10,0" VerticalAlignment="Top" Width="75" Style="{StaticResource MetroButton}" Click="btnRefresh_Click"/>
+            <Label Content="? Double Click untuk detail" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Style="{StaticResource textDefault}" FontSize="14" FontWeight="Bold" Foreground="Yellow"/>
+            <Label Content="API Provided By Davin Alfarizky Putra Basudewa, Contribute to the viewer click here!" HorizontalAlignment="Right" Margin="321,73,10,0" VerticalAlignment="Top" Style="{StaticResource textDefault}"/>
+        </Grid>
+        <DataGrid x:Name="dgvAnimeList" Margin="0" MouseDoubleClick="dgvAnimeList_MouseDoubleClick" Grid.ColumnSpan="2" AutoGenerateColumns="False" CanUserAddRows="False" Grid.Row="1" Height="459" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource DGV}">
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Header="Package ID" Width="Auto" Binding="{Binding package_anim}"></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Anime Name" Width="*" Binding="{Binding name_anim}"></DataGridTextColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Rating" Width="Auto" Binding="{Binding rating}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
